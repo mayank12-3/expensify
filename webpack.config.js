@@ -1,13 +1,13 @@
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env) => {
-  const isProduction = env === 'production'
-  const CSSExtract = new ExtractTextPlugin('styles.css')
+  const isProduction = env === 'production';
+  const CSSExtract = new ExtractTextPlugin('styles.css');
 
   return {
-    'entry': './src/app.js',
-    'output': {
+    entry: './src/app.js',
+    output: {
       path: path.join(__dirname, 'public'),
       filename: 'bundle.js'
     },
@@ -25,14 +25,15 @@ module.exports = (env) => {
               options: {
                 sourceMap: true
               }
-            }, {
+            },
+            {
               loader: 'sass-loader',
               options: {
                 sourceMap: true
               }
             }
           ]
-        }),
+        })
       }]
     },
     plugins: [
@@ -43,5 +44,5 @@ module.exports = (env) => {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true
     }
-  }
-}
+  };
+};
