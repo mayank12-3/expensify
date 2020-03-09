@@ -1,8 +1,13 @@
 # dependencies
 /node_modules
 
+
 # production
 /build
+public/bundle.js
+public/bundle.js.map
+public/style.css
+public/style.css.map
 
 # misc
 .DS_Store
