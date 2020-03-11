@@ -4,6 +4,6 @@
 
 # production
 public/dist
-
+.env.development
 # misc
 .DS_Store
